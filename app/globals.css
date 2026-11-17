@@ -110,7 +110,7 @@ button:hover { background: var(--panel); }
 .side dt { color: var(--muted); }
 .side dd { margin: 0; overflow-wrap: anywhere; }
 .txns, .acts { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
-.txns li, .acts li { display: flex; justify-content: space-between; gap: 8px; font-size: 13px; }
+.txns li, .acts li { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; font-size: 13px; }
 .txns em { color: var(--muted); font-style: normal; display: block; text-align: right; }
 
 .eval { padding: 16px; overflow-x: auto; }
