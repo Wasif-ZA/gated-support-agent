@@ -18,6 +18,8 @@ Committed locally on `main`. No remote, nothing pushed, no API key used, no exte
 | Screens | `next start` on :3101, headless Chrome, `page-check.py` at 390 and 1280 | No overflow; only intended ellipsis on list previews |
 | Run agent again | CDP click on T13's button | `runs.ran_at` moved from 10:01:15 to 10:05:06 UTC |
 | README preview | Rendered with python-markdown, `page-check.py` at 390 and 1280 | ok, ok |
+| README steps on a fresh clone | `git clone` into scratch, then `npm install`, `db:up`, `seed`, `test`, `typecheck`, `lint`, `build`, `start` | All passed; seed 30/30, tests 43/43, /eval shows 30/30 passed, T29 shows blocked: ticket-cap |
+| Video and GIF | Frames at 12, 16, 24, 30, 35, 62, 75, 82 s and the four GIF stills opened and read | Captions readable, nothing personal; the end caption was first hidden by the hide script (it matched "Wasif" in the repo URL) and was re-recorded |
 
 App code: 848 lines across `lib/`, `app/`, `scripts/` (of which `lib/data.ts` is 196 lines of synthetic data).
 
@@ -90,7 +92,8 @@ Numbers recorded anyway (gh api, 2026-11-17):
   been type checked against SDK 1.9.0, never run.
 - **How Claude scores unguided.** The 30/30 is on scripted turns; the real number is unknown until he runs
   `npm run seed` with a key.
-- **A clean clone on another machine.** Built and run only here (Windows, Git Bash, Docker Desktop).
+- **Another machine.** A fresh clone passed here (Windows, Git Bash, Docker Desktop); macOS and Linux are untested.
+- **Postgres readiness on a first pull.** `npm run seed` now waits up to 30 s for Postgres; the clone run never needed it.
 
 ## Hand-back steps
 

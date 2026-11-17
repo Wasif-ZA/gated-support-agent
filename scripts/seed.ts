@@ -2,6 +2,15 @@ import { getTickets, pool, reset, runAndSave } from "../lib/db.ts";
 import { grade } from "../lib/agent.ts";
 import { callModel, modelName } from "../lib/claude.ts";
 
+for (let i = 0; ; i++) {
+  try {
+    await pool.query("select 1");
+    break;
+  } catch (e) {
+    if (i === 30) throw e;
+    await new Promise((r) => setTimeout(r, 1000));
+  }
+}
 await reset();
 let passed = 0;
 const tickets = await getTickets();
