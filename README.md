@@ -3,7 +3,7 @@
 A support desk for a made-up fintech where the AI agent can only do what a permission gate allows.
 The agent is safe because the gate says no, not because the prompt asks nicely.
 
-**Demo:** [watch the video](VIDEO_URL_PENDING).
+**Demo:** [watch the video](https://drive.google.com/file/d/1Z_D-oEqldznBAv7Pc6caYIaKsGHeG_pS/view).
 
 [Run it](#run-it) · [Test the rules](#test-the-rules) · [How it works](#how-it-works)
 
